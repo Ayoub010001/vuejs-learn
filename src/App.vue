@@ -27,6 +27,7 @@ function removeTodo(todo) {
 }
 </script>
 
+
 <template>
   <form @submit.prevent="addTodo">
     <input v-model="newTodo" required placeholder="new todo">

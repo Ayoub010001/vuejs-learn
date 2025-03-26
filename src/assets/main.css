@@ -6,6 +6,9 @@
   padding: 2rem;
   font-weight: normal;
 }
+.done {
+  text-decoration: line-through;
+}
 
 a,
 .green {
