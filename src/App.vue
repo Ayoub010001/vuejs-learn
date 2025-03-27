@@ -1,4 +1,7 @@
-<!-- <script setup>
+<!-- 
+**This code without Pinia store** 
+
+<script setup>
 import { ref, computed } from 'vue'
 
 let id = 0
@@ -43,33 +46,19 @@ function removeTodo(todo) {
   <button @click="hideCompleted = !hideCompleted">
     {{ hideCompleted ? 'Show all' : 'Hide completed' }}
   </button>
-</template> -->
+</template> 
+-->
 
 <script setup>
 import { useTodoStore } from './store/todoStore';
-
 const todoStore = useTodoStore();
+import AddTodoForm from './components/AddTodoForm.vue';
+import HideShowBtn from './components/HideShowBtn.vue';
+import Todos from './components/Todos.vue';
 </script>
 
 <template>
-  <form @submit.prevent="todoStore.addTodo">
-    <input v-model="todoStore.newTodo" required placeholder="new todo" />
-    <button>Add Todo</button>
-  </form>
-  <ul>
-    <li v-for="todo in todoStore.filteredTodos" :key="todo.id">
-      <input type="checkbox" v-model="todo.done" />
-      <span :class="{ done: todo.done }">{{ todo.text }}</span>
-      <button @click="todoStore.removeTodo(todo)">X</button>
-    </li>
-  </ul>
-  <button @click="todoStore.hideCompleted = !todoStore.hideCompleted">
-    {{ todoStore.hideCompleted ? 'Show all' : 'Hide completed' }}
-  </button>
+  <AddTodoForm />
+  <Todos />
+  <HideShowBtn />
 </template>
-
-<style>
-.done {
-  text-decoration: line-through;
-}
-</style>
