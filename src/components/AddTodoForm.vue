@@ -5,7 +5,7 @@
 
 <template>
     <form @submit.prevent="todoStore.addTodo">
-      <input v-model="todoStore.newTodo" required placeholder="new todo" />
-      <button>Add Todo</button>
+      <input type="text" v-model="todoStore.newTodo" required placeholder="new todo" />
+      <button class="btn">Add Todo</button>
     </form>
 </template>

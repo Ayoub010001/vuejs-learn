@@ -1,38 +1,50 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+h1{
+  margin: 1rem;
 }
-.done {
-  text-decoration: line-through;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+input[type="text"] {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin: 1rem;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.btn{
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin: 1rem;
+  background-color: #66D2CE;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: grid;
-    place-items: center;
-  }
+li{
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+  background-color: rgba(47, 79, 79, 0.403);
+  min-width: 220px;
+  width: fit-content;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+li:hover{
+  background-color: darkslategray;
+}
 
-  #app {
-    /* display: grid; */
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+li>button{
+  background-color: #006A71;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0.2rem 0.5rem;
+  color: aliceblue;
+  font-size: 1.2rem;
+  align-self: flex-end;
+  justify-self: flex-end;
+  cursor: pointer;
 }

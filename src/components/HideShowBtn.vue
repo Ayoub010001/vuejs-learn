@@ -4,7 +4,7 @@
 </script>
 
 <template>
-<button @click="todoStore.hideCompleted = !todoStore.hideCompleted">
+<button class="btn" @click="todoStore.hideCompleted = !todoStore.hideCompleted">
     {{ todoStore.hideCompleted ? 'Show all' : 'Hide completed' }}
   </button>
 </template>

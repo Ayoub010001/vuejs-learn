@@ -50,14 +50,13 @@ function removeTodo(todo) {
 -->
 
 <script setup>
-import { useTodoStore } from './store/todoStore';
-const todoStore = useTodoStore();
 import AddTodoForm from './components/AddTodoForm.vue';
 import HideShowBtn from './components/HideShowBtn.vue';
 import Todos from './components/Todos.vue';
 </script>
 
 <template>
+  <h1>Simplest To-app ever!</h1>
   <AddTodoForm />
   <Todos />
   <HideShowBtn />
